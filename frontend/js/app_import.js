@@ -5,9 +5,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-
 $(document).ready(function(){
-  
   var path_optimize = 1;
   var forceSvgDpiTo = undefined;
   
@@ -36,7 +34,7 @@ $(document).ready(function(){
   //reset tap
   $('#canvas_properties .colorbtns').html('');  // reset colors
   canvas.background('#ffffff');
-  $('#dpi_import_info').html('Supported file formats are: <b>SVG</b>, <b>DXF</b>');
+  $('#dpi_import_info').html('<span id="supported_file">Supported file formats are:</span> <b>SVG</b>, <b>DXF</b>');
 
 
   $('#bed_size_note').html(app_settings.work_area_dimensions[0]+'x'+
@@ -251,5 +249,6 @@ $(document).ready(function(){
   });
 
 
+  loadTranslateFile()
 
 });  // ready
